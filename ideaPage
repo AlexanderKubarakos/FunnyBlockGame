@@ -1,0 +1,4 @@
+Make a ressource manger, then have data packs, so only one res mang and each mod is a data pack (including vinlla)
+Have generic classes for nuggets, ingots, blocks so that adding mutliple metals and materials is easy
+Every item and entite (maybe even placed block? But that might want to be a tile entite dont know) has to have tags, cache tags so that you can-
+Loop through every "zombie" or "passive" or "item"
