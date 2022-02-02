@@ -24,7 +24,7 @@ namespace client
 		auto worldManger = std::make_shared<WorldManager>();
 		auto chunkManager = worldManger->getChunkManager();
 		chunkManager->loadChunk(0, 0, 0);
-		//chunkManager->loadChunk(1, 0, 0);
+		chunkManager->loadChunk(1, 0, 0);
 		//chunkManager->loadChunk(2, 0, 0);
 		//chunkManager->loadChunk(3, 0, 0);
 

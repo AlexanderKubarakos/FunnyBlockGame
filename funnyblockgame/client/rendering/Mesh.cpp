@@ -35,7 +35,6 @@ namespace client
 		return EBO;
 	}
 
-
 	void Mesh::makeDirty()
 	{
 		dirty = true;

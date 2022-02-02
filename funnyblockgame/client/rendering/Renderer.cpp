@@ -82,7 +82,7 @@ namespace client
 			}
 
 			glBindVertexBuffer(0, mesh->getVertexVBO(), 0, sizeof(float) * 3);
-			glDrawArrays(GL_TRIANGLES, 0, mesh->length());
+			glDrawElements(GL_TRIANGLES, mesh->length(), GL_UNSIGNED_INT, 0);
 		}
 	}
 

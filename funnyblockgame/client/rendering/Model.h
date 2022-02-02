@@ -2,6 +2,7 @@
 
 #include "../../utils/Direction.h"
 #include "glm/glm.hpp"
+
 // std
 #include <vector>
 
@@ -11,21 +12,31 @@ namespace client
 	class Model
 	{
 		bool opaqueNorth, opaqueSouth, opaqueEast, opaqueWest, opaqueUp, opaqueDown;
-		std::vector<float> upSide;
-		std::vector<float> downSide;
-		std::vector<float> northSide;
-		std::vector<float> southSide;
-		std::vector<float> eastSide;
-		std::vector<float> westSide;
-		std::vector<float> allwaysRender;
+		std::vector<float> upSideVertices;
+		std::vector<float> downSideVertices;
+		std::vector<float> northSideVertices;
+		std::vector<float> southSideVertices;
+		std::vector<float> eastSideVertices;
+		std::vector<float> westSideVertices;
+		std::vector<float> alwaysRenderVertices;
 
-		void pushVert(std::vector<float>& vector, glm::vec3& vert);
-		void pushFace(std::vector<float>& vector, glm::vec3& vert1, glm::vec3& vert2, glm::vec3& vert3);
+		std::vector<unsigned int> upSideIndices;
+		std::vector<unsigned int> downSideIndices;
+		std::vector<unsigned int> northSideIndices;
+		std::vector<unsigned int> southSideIndices;
+		std::vector<unsigned int> eastSideIndices;
+		std::vector<unsigned int> westSideIndices;
+		std::vector<unsigned int> alwaysRenderIndices;
+
+		void pushVertex(std::vector<float>& vector, glm::vec3& vertex);
+		void pushFace(std::vector<float>& vector, glm::vec3& vertex1, glm::vec3& vertex2, glm::vec3& vertex3);
 	public:
 		Model();
 		bool isSideOpaque(Direction direction);
 		void setModelToBlockModel();
-		int getVertCount(Direction direction);
-		std::vector<float>& getSideVerts(Direction direction);
+		int getVertexCount(Direction direction);
+		int getIndicesCount(Direction direction);
+		const std::vector<float>& getSideVerts(Direction direction);
+		const std::vector<unsigned int>& getSideIndices(Direction direction);
 	};
 }

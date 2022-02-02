@@ -12,7 +12,7 @@ namespace client
 	{
 		// Doesn't generate it's self only stores
 		unsigned int vertVBO, texVBO, EBO; // the vbos that hold the data for the mesh
-		bool dirty = true; // if a mesh needs to be regend
+		bool dirty = true; // if a mesh needs to be regened
 		unsigned int lengthData;
 	public:
 		Mesh();

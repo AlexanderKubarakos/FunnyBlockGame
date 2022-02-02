@@ -26,8 +26,8 @@ namespace client
 		}
 		glViewport(0, 0, width, height);
 		glEnable(GL_DEPTH_TEST);
-		//glEnable(GL_CULL_FACE); // TODO: reenable face culling when done testing rendering
-		//glEnable(GL_BACK);
+		glEnable(GL_CULL_FACE); // TODO: reenable face culling when done testing rendering
+		glEnable(GL_BACK);
 		glfwSwapInterval(0);
 
 		int nrAttributes;
